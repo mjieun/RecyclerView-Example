@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
 
         listView = findViewById(R.id.todoListView);
         adapter = new TodoListAdapter();
+
+        adapter.addToList("첫번째 테스트");
+        adapter.addToList("2번째 테스트");
+        adapter.addToList("3번째 테스트");
+        adapter.addToList("테스트 테스트");
         listView.setAdapter(adapter);
     }
 }
