@@ -30,8 +30,9 @@ public class TodoListAdapter extends BaseAdapter {
         Log.d("ASDF", "getView가 호출되었습니다. position : " + position);
 
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
         View view = inflater.inflate(R.layout.item_todo, parent, false);
+
+
         TextView titleText = view.findViewById(R.id.itemTitleText);
         TextView contentText = view.findViewById(R.id.itemContentText);
 
