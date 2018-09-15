@@ -15,6 +15,8 @@ public class TodoRecyclerAdapter extends RecyclerView.Adapter<TodoRecyclerAdapte
 
     public void addTodo(TodoVo todo) {
         list.add(todo);
+        notifyItemInserted(list.size() - 1);
+
     }
 
     @Override
