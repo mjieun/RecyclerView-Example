@@ -17,10 +17,14 @@ public class MainActivity extends AppCompatActivity {
         listView = findViewById(R.id.todoListView);
         adapter = new TodoListAdapter();
 
-        adapter.addToList("첫번째 테스트");
-        adapter.addToList("2번째 테스트");
-        adapter.addToList("3번째 테스트");
-        adapter.addToList("테스트 테스트");
-        listView.setAdapter(adapter);
+
+        for (int i = 0; i < 100; i++) {
+            adapter.addTodo(new TodoVo("첫 타이틀", "콘텐츠입니다"));
+            adapter.addTodo(new TodoVo("첫 타이틀2", "콘텐츠입니다ㅋㅋ"));
+            adapter.addTodo(new TodoVo("첫 타이틀3", "콘텐츠입니다ㄴㄴ"));
+            adapter.addTodo(new TodoVo("첫 타이틀4", "콘텐츠입니ㄴㅇㄹ다"));
+            adapter.addTodo(new TodoVo("첫 타이틀ㅋㅋ", "콘텐츠입ㅇㅇㅇㅇㅇㅇㄹㄹㄹ니다"));
+            listView.setAdapter(adapter);
+        }
     }
 }
