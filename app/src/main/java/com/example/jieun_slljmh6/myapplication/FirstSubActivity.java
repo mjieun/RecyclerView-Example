@@ -17,6 +17,7 @@ public class FirstSubActivity extends AppCompatActivity {
         listView = findViewById(R.id.todoListView);
         adapter = new TodoListAdapter();
 
+        listView.setAdapter(adapter);
 
         for (int i = 0; i < 100; i++) {
             adapter.addTodo(new TodoVo("첫 타이틀", "콘텐츠입니다"));
@@ -24,7 +25,6 @@ public class FirstSubActivity extends AppCompatActivity {
             adapter.addTodo(new TodoVo("첫 타이틀3", "콘텐츠입니다ㄴㄴ"));
             adapter.addTodo(new TodoVo("첫 타이틀4", "콘텐츠입니ㄴㅇㄹ다"));
             adapter.addTodo(new TodoVo("첫 타이틀ㅋㅋ", "콘텐츠입ㅇㅇㅇㅇㅇㅇㄹㄹㄹ니다"));
-            listView.setAdapter(adapter);
         }
     }
 }
