@@ -1,30 +1,31 @@
 package com.example.jieun_slljmh6.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView listView;
-    TodoListAdapter adapter;
+    Button firstBtn, secondBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        listView = findViewById(R.id.todoListView);
-        adapter = new TodoListAdapter();
+        firstBtn = findViewById(R.id.firstBtn);
+        secondBtn = findViewById(R.id.secondBtn);
 
 
-        for (int i = 0; i < 100; i++) {
-            adapter.addTodo(new TodoVo("첫 타이틀", "콘텐츠입니다"));
-            adapter.addTodo(new TodoVo("첫 타이틀2", "콘텐츠입니다ㅋㅋ"));
-            adapter.addTodo(new TodoVo("첫 타이틀3", "콘텐츠입니다ㄴㄴ"));
-            adapter.addTodo(new TodoVo("첫 타이틀4", "콘텐츠입니ㄴㅇㄹ다"));
-            adapter.addTodo(new TodoVo("첫 타이틀ㅋㅋ", "콘텐츠입ㅇㅇㅇㅇㅇㅇㄹㄹㄹ니다"));
-            listView.setAdapter(adapter);
-        }
+        firstBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FirstSubActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
